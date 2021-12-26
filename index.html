@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel = 'stylesheet' href = 'styles.css'>
+</head>
+<body>
+    <h1>My Library</h1>
+    <div class = "form-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>TITLE</th>
+                    <th>AUTHOR</th>
+                    <th># OF PAGES</th>
+                    <th>HAS BEEN READ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input id ="title-entry"></td>
+                    <td><input id = "author-entry"></td>
+                    <td><input id = "pages-entry"></td>
+                    <td><input type = "checkbox" id = "read-entry"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class = 'add-book-btn'>ADD NEW BOOK</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th scope = "col">Title</th>
+                <th scope = "col">Author</th>
+                <th scope = "col"># of Pages</th>
+                <th scope = "col">Have Read</th>
+                <th scope = "col">Remove Book</th>
+            </tr>
+        </thead>
+        <tbody class = "library">
+        </tbody>
+    </table>
+    <script src = 'script.js'></script>
+</body>
+</html>
