@@ -9,19 +9,22 @@ const readInput = document.querySelector("#read-entry");
 addBookbtn.addEventListener("click", newBook);
 
 //object constructor
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = () => {
+class Book{
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    info = () => {
         let isRead = '';
-        if(read){
+        if(this.read){
             isRead = 'has been read.'
         } else {
             isRead = 'has not been read yet.'
         }
-        return `${title} by ${author}, ${pages} pages, ${isRead}`
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.isRead}`
     };
 };
 //pushes Book objects to myLibrary for local storage later
